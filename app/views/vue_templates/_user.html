@@ -1,6 +1,18 @@
 <script id="user-template" type="text/template">
   <div>
-    <div>{{ user.name }}</div>
-    <div>{{ user.email }}</div>
+    <div v-if="!isEditing">
+      <div>{{ user.name }}</div>
+      <div>{{ user.email }}</div>
+      <button v-on:click="editUser">Edit User</button>
+    </div>
+
+    <div v-if="isEditing">
+      <form v-on:submit.prevent="handleEdit">
+        <input type="text">
+        <input type="submit" value="submit to my form">
+      </form>
+
+    </div>
+
   </div>
 </script>

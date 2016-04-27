@@ -17,6 +17,7 @@
 
     data: function () {
       return {
+        isEditing: false,
         user: {}
       }
     },
@@ -29,6 +30,22 @@
       }).then(function (data) {
         self.user = data
       })
+    },
+
+    methods: {
+
+      editUser: function () {
+        var self = this
+
+        self.isEditing = true
+      },
+
+      handleEdit: function () {
+        var self = this
+
+        console.log("handle edit called")
+      },
+
     }
 
   })
