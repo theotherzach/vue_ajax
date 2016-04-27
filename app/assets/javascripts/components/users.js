@@ -17,7 +17,7 @@
 
     data: function () {
       return {
-        users = []
+        users: []
       }
     },
 

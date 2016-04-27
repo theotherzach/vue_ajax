@@ -1,6 +1,5 @@
 # Vue Ajax
 
-
 The purpose of this exercise is to read and update users via ajax calls. 
 
 ## Setup
