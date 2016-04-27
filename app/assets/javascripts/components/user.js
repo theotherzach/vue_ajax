@@ -17,13 +17,18 @@
 
     data: function () {
       return {
-        users: []
+        user: {}
       }
     },
 
     init: function () {
       var self = this
-      console.log("Init runs when the component boots. This is a good spot to get data.")
+      $.ajax({
+        method: "GET",
+        url: "/api/users/1"
+      }).then(function (data) {
+        self.user = data
+      })
     }
 
   })
