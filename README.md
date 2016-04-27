@@ -10,6 +10,8 @@ The purpose of this exercise is to read and update users via ajax calls.
 
 ## Instructions
 
+[video 1](http://youtu.be/OjFCBopqf8A)
+
 ### Part 1: Single User
 + Open the root route and follow the first link to manage a single user
 + Open pages_controller, note the gon assignment in the manage_user action. Verify that gon.user_id exists in the JS console.
@@ -26,9 +28,26 @@ $.ajax({
 ```
 
 + display the user's name and email address in page
-+ add a button that says "edit"
-+ When the "edit" button is pushed, display input fields with the user's details
-+ ...
++ Add a button that says "edit" and a `v-on:click=editUser`
++ Wrap the user's name, email, and the button with a div that has the directive `v-if="!isEditing`
++ Add a method called `editUser` that changes `isEditing` to true
++ Add a form to be displayed when the edit button is pressed. It'll have 2 inputs, one with a v-model for user.email and the other user.name
++ Add an input with a type of submit and a value of submit to the form.
++ Add the directive `v-on:submit.prevent="handleEdit"` to your form and a method `handleEdit`.
++ `console.log` the user when the form is submitted
++ Save the user to the database when the form is submitted
+```
+        var self = this
+        $.ajax({
+          method: "PATCH",
+          url: userUrl(gon.user_id),
+          data: { user: self.user }
+        }).then(function (data) {
+          self.user = data
+          self.isEditing = false
+          })
+```
++ set `self.isEditing` to false when the user is saved.
 
 ### Part 2: Many Users
 + Open app/assets/javascripts/components/users.js. Open a new browser tab to where the function usersUrl evaluates to.
