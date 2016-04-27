@@ -11,7 +11,24 @@ The purpose of this exercise is to read and update users via ajax calls.
 ## Instructions
 
 ### Part 1: Single User
++ Open the root route and follow the first link to manage a single user
++ Open pages_controller, note the gon assignment in the manage_user action. Verify that gon.user_id exists in the JS console.
++ Fetch the single user in the `user.js`'s init function
 
+```
+var self = this
+$.ajax({
+  url: "/api/users/1",
+  method: "GET"
+}).then(function (data) {
+  self.user = data
+})
+```
+
++ display the user's name and email address in page
++ add a button that says "edit"
++ When the "edit" button is pushed, display input fields with the user's details
++ ...
 
 ### Part 2: Many Users
 + Open app/assets/javascripts/components/users.js. Open a new browser tab to where the function usersUrl evaluates to.
