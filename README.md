@@ -10,7 +10,10 @@ The purpose of this exercise is to read and update users via ajax calls.
 
 ## Instructions
 
-[video 1](http://youtu.be/OjFCBopqf8A)
+* [video 1](http://youtu.be/OjFCBopqf8A)
+* [Video 2](http://youtu.be/Bkc_9I4BHqE)
+* [Video 3](http://youtu.be/gL68Bdha1yk)
+* [Video 4](http://youtu.be/SbfNn06vTEI)
 
 ### Part 1: Single User
 + Open the root route and follow the first link to manage a single user
