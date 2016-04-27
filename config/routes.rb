@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   root "pages#home"
 
+  get "manage_user/:id" => "pages#manage_user"
+
+  get "manage_users" => "pages#manage_users"
+
   namespace :api do
     resources :users
   end

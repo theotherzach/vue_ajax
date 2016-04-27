@@ -10,6 +10,10 @@ The purpose of this exercise is to read and update users via ajax calls.
 
 ## Instructions
 
+### Part 1: Single User
+
+
+### Part 2: Many Users
 + Open app/assets/javascripts/components/users.js. Open a new browser tab to where the function usersUrl evaluates to.
 + In the JavaScript console of localhost:3000, run `$.ajax({ method: "GET", url: "/api/users" }).then(function (data) { console.log(data) })`
 + Holy crap, promises! 
