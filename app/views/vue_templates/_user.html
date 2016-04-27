@@ -8,7 +8,8 @@
 
     <div v-if="isEditing">
       <form v-on:submit.prevent="handleEdit">
-        <input type="text">
+        <input type="text" v-model="user.name">
+        <input type="text" v-model="user.email">
         <input type="submit" value="submit to my form">
       </form>
 

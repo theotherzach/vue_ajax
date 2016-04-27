@@ -43,7 +43,14 @@
       handleEdit: function () {
         var self = this
 
-        console.log("handle edit called")
+        $.ajax({
+          method: "PATCH",
+          url: "/api/users/1",
+          data: { user: self.user }
+        }).then(function (data) {
+          self.user = data
+          self.isEditing = false
+        })
       },
 
     }
